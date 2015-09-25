@@ -1,0 +1,36 @@
+package vista;
+
+import modelo.Numero;
+
+public class test4 {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		//Utilizando un while imprimir los números primos mellizos hasta n
+		
+		Numero n= new Numero(30);
+		Numero aux= new Numero(1);
+		Numero aux2= new Numero(1);
+		
+		int i=1;
+		
+		while(i<=n.getN()){
+		aux.setN(i);
+		aux2.setN(i+1);
+		
+			if(aux.esPrimo()&&aux2.esPrimo()){
+				if(aux.esMellizo(aux2)){
+					System.out.println("\n"+aux.getN());	
+				}
+			}
+		i++;	
+		}
+		
+		
+	}
+
+}

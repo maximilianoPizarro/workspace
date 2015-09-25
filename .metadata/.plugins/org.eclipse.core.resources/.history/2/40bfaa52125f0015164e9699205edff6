@@ -1,0 +1,27 @@
+package modelo;
+
+public class Numero {
+	
+	private int n;
+	
+	public Numero(int n){
+		this.n=n;
+	}
+
+	public int getN() {
+		return n;
+	}
+
+	public void setN(int n) {
+		this.n = n;
+	}
+	
+	public String toString(){
+		return ("n: "+n);
+	}
+	
+	public boolean equals(Numero n){
+		return n==n.getN();
+	}
+
+}

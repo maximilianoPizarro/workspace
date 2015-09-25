@@ -1,0 +1,56 @@
+package modelo;
+
+public class Punto {
+	//atributos
+	private double x;
+	private double y;
+
+	//constructor
+	public Punto(){
+		this.x=0.0;
+		this.y=0.0;
+	}
+		
+	public Punto(double x, double y) { //sobrecargado
+		this.x = x;
+		this.y = y;
+	}
+	//metodos getter y setter	
+	public double getX() {
+		return x;
+	}
+	public void setX(double x) {
+		this.x = x;
+	}
+	public double getY() {
+		return y;
+	}
+	public void setY(double y) {
+		this.y = y;
+	}
+
+	//re-definición de métodos de la clase object
+	public boolean equals(Punto p){
+	return((x==p.getX())&&(y==p.getY()));	
+	}
+	
+	@Override
+	public String toString(){
+		return "("+x+","+y+")";
+	}
+	
+	public double calcularDistancia(Punto p){
+	return Math.sqrt(Math.pow(x-p.getX(),2)+
+            Math.pow(y-p.getY(), 2));	
+	}
+	
+	/*
+	  Es primo                                 (1)
+	 Un número natural p se dice que es primo si p>1 y si sus únicos divisores positivos son 1 y p
+	 Son primos mellizos               (2)
+		Dos números primos se dice que son mellizos si su diferencia es 2, 
+		por ejemplo 17 y 19 son primos mellizos
+	*/
+	
+
+}

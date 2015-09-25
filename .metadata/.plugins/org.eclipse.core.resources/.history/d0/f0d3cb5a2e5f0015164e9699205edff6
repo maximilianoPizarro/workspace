@@ -1,0 +1,39 @@
+package modelo;
+
+public class Numero {
+	
+	private int n;
+	
+	public Numero(int n){
+		this.n=n;
+	}
+
+	public int getN() {
+		return n;
+	}
+
+	public void setN(int n) {
+		this.n = n;
+	}
+	
+	/*
+	  Es primo                                 (1)
+	 Un número natural p se dice que es primo si p>1 y si sus únicos divisores positivos son 1 y p
+	 Son primos mellizos               (2)
+		Dos números primos se dice que son mellizos si su diferencia es 2, 
+		por ejemplo 17 y 19 son primos mellizos
+	*/
+	
+	
+	public boolean equals(Numero numero){
+		return (n==numero.getN());
+	}
+	
+	@Override
+	public String toString(){
+		return ("n: "+n);
+	}
+
+	
+
+}
